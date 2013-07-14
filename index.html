@@ -42,33 +42,78 @@
        border-top: 1px white solid; 
      }
     }
-      .container {
-        width: 960px;
-      }
-      p.lead {
-        padding-top: 15px;
-      }
-      .navigation, .pitch, .section1, .section2, .faq, .footer {
-        padding: 10px 0px 10px 0px;
-      }
-      .video, .thermometer, .order, .social {
-        border: 1px dotted; 
-        text-align: center; 
-      }
-      .video {
-        /* internal borders have 1px width, thus need to add 4 x 1 px to 120px. */ 
-        height: 124px; 
-        line-height: 124px;
-      }
-      .thermomenter, .order, .social { 
-        /* line-height to vertically center: http://phrogz.net/css/vertical-align/index.html */ 
-        height: 40px; 
-        line-height: 40px;
-      }
-      div.row { 
-        border: 1px solid;
-      }
-      </style> 
+
+    /* All form factors */ 
+    body { 
+      font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    } 
+    .heading, .subheading { 
+      font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      text-align: center; 
+    }
+
+    p.lead { 
+      padding-top: 1.5%; 
+      font-size: 24px; 
+      line-height: 30px; 
+    }
+
+    p { 
+      font-size: 18px; 
+      line-height: 30px; 
+    } 
+    
+    /* Video pitch and Action */ 
+    .pitch { 
+      padding: 2.5% 0%; 
+    }
+
+    .order { 
+      padding: 2% 0%; 
+    }
+    
+    .actions { 
+      background-color: #343434; 
+      padding: 3% 0%; 
+    }
+
+    .video, .thermometer, .order, .social, .statistics { 
+      text-align center; 
+    }
+
+    .statistics h3, .statistics p { 
+      color: white; 
+    }
+    
+    /* Marketing Copy and Footer */ 
+    
+    .copy { 
+      padding-top: 2.5%; 
+      padding-bottom: 2.5%; 
+      text-align: justify; 
+    }
+    
+    .asset { 
+      padding: 2.5% 0%; 
+    }
+    
+    .footer { 
+      color: #cccccc; 
+      text-align: center; 
+    }
+    
+    .footer p { 
+      font-size: 11px; 
+    }
+
+    .footer a { 
+      color: #ccccff; 
+    }
+
+
+
+
+    </style> 
     </head>
     <body>
 
@@ -109,7 +154,7 @@
 	</div>
       </div>
 
-      <div class="raw-fluid subheading">
+      <div class="row-fluid subheading">
 	<div class="span12">
 	  <!-- Special typography from Bootstrap for lead paragraph --> 
 	  <!-- http://twitter.github.io/bootstrap/base-css.html#typography --> 
@@ -140,7 +185,7 @@
 	      
 
 	    <div class="span4"> 
-	      <div class="linediv-r"> 
+	      <div class="linediv-c"> 
 		<h3>$6000</h3> <p>of $10,000</p>
 	      </div> 
 	    </div> 
@@ -163,70 +208,97 @@
 	</div> 
       </div> 
 
-      
+      <div classs="span6 offset3 order">
+      <!-- Standard Bootstrap button --> 
+      <!-- http://twitter.github.io/bootstrap/base-css.html#buttons --> 
+        <button class="btn btn-success btn-large">Preorder</button>
+      </div> 
 
-
-
-
-      <div class="row navigation"> 
-	  <div class="span2 logo"> 
-	    Logo
-	  </div>
-	  <div class="span6 blank"> 
-	    Blank
-	  </div>
-	  <div class="span4 about"> 
-	    About
-	  </div>
-	</div>
-	<div class="row heading"> 
-	  <div class="span12"> 
-	    <h1>Bitstarter Title</h1>
-	  </div>
-	</div> 
-	<div class="row subheading"> 
-	  <div class="span12"> 
-	    <p class="lead">This is my first bitstarter project.</p> 
-	  </div> 
-	</div> 
-	<div class="row pitch"> 
-	  <div class="span6 video">
-	    Video
-	  </div> 
-	  <div class="span6"> 
-	    <div class="thermometer"> 
-	      Thermometer
-	    </div> 
-	    <div class="order"> 
-	      Order
-	    </div> 
-	    <div class="social">
-	      Social
-	    </div> 
-	  </div> 
-	</div> 
-	<div class="row section1"> 
-	  <div class="span12">
-	    Marketing Section 1
-  	  </div> 
-	</div> 
-	<div class="row section2"> 
-	  <div class="span12"> 
-	    Marketing Section 2
-  	  </div> 
-	</div> 
-	<div class="row faq"> 
-	  <div class="span12"> 
-	    FAQ
-  	  </div> 
-	</div> 
-	<div class="row footer"> 
-	  <div class="span12"> 
-	    Footer
-  	  </div> 
-	</div>	  
+      <div clas="span8 offset2 social">
+	<!-- Social buttons are not included in default Bootstrap --> 
+	<!-- See: http://noizwaves.github.io/bootstrap-social-buttons --> 
+	<button class="btn btn-twitter"><i class="icon-twitter"></i> I Twitter</button>
+	<button class="btn btn-facebook"><i class="icon-facebook"></i> I Facebook</button> 
       </div>
+    </div>
+  </div> 
+
+  <!-- Beyond this point the marketing copy begins --> 
+  <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align --> 
+  <!-- http://twitter.github.io/bootstrap/base-css.html#images --> 
+  <!-- http://placehold.it --> 
+  
+  <div class="row-fluid section1"> 
+    <div class="span5 offset1 asset">
+      <img class="img-polaroid" src="http://placehold.it/480x300">
     </div> 
+    <div class="span5 copy"> 
+      <p>
+	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud e          xercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pa          riatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      </p>
+    </div>
+  </div>	
+
+  <div class="row-fluid section2"> 
+    <div class="span5 offset1 copy copy-right">
+      <p> 
+	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud e          xercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pa          riatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      </p>
+    </div> 
+    <div class="span5 asset">
+      <img class="img-polaroid" src="http://placehold.it/480x300"> 
+    </div> 
+  </div> 
+
+  <!-- for the FAQ, we introduce a little bit of J5, using the accordian --> 
+  <!-- This brings in jquery and bootstrap.js as dependencies --> 
+  <!-- http://twitter.github.io/bootstrap/javascript.html#collapse --> 
+  <div class="row-fluid faq"> 
+    <div class="span10 offset1"> 
+      <h3>FAQ</h3> 
+      <div class="accordian" id="accordian2"> 
+	<div class="accordian-group"> 
+	  <div class="accordian-heading"> 
+	    <a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian2" href="#collapseOne"> 
+	    What does FAQ stand for? 
+	    </a> 
+	  </div> 
+	  <div id="collapseOne" class="accordian-body collapse"> 
+	    <div class="accordian-inner"> 
+	    Frequently Asked Questions
+	    </div> 
+	  </div> 
+	</div> 
+	<div class="accordian-group"> 
+	  <div class="accordian-heading"> 
+	    <a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian2" href="#collapseTwo"> 
+	    What's a Frequently Asked Question
+	    </a> 
+	  </div> 
+	  <div id="collapseTwo" class="accordian-body collapse"> 
+	    <div class ="accordian-inner"> 
+	      A question which is commonly asked by users. 
+	    </div>
+	  </div> 
+	</div> 
+      </div> 
+    </div> 
+
+  </div> 
+
+  <!-- Not crucial, but we put this under a CC By-SA 3.0 license. --> 
+  <!-- http://creativecommons.org/licenses/ --> 
+  <div class="row-fluid footer"> 
+    <div class="span12"> 
+      <p>This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC By-SA 3.0</a>
+	, without all the cruft that would otherwise be put at the bottom of the page.</p>
+    </div> 
+  </div> 
+</div> 
+
+ 
+
+
   </body> 
 </html> 
 
