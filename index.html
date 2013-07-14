@@ -5,8 +5,22 @@
     <title>My First Bitstarter</title>
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
-    <link rel="stylesheet" href="https://netdna.boostrapcdn.com/font-awesome/3.0.2/css/font-awesom.css">
+    
+    <!-- Imports to make the social buttons work --> 
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
+    
+    <!-- Imports to make the accordian work --> 
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+    
+
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css"> 
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css"> 
+
+
+
+
     <style type = "text/css">
 
     /** Implementation note: 
@@ -78,7 +92,7 @@
     }
 
     .video, .thermometer, .order, .social, .statistics { 
-      text-align center; 
+      text-align: center; 
     }
 
     .statistics h3, .statistics p { 
@@ -175,51 +189,54 @@
 	<div class="span5 actions"> 
 	  <div class="span8 offset2">
 	    <div class="statistics"> 
+	      
 	      <div class="span4"> 
 	      <!-- linediv-l and linediv-r give dividing lines that look different in -->
 	      <!-- horizontal and vertical layouts, illustrating media queries --> 
-	      <div class="linediv-l"> 
-	      <h3>1000</h3> <p>backers</p> 
+	        <div class="linediv-l"> 
+	          <h3>1000</h3> <p>backers</p> 
+	        </div> 
 	      </div> 
-	    </div> 
 	      
 
-	    <div class="span4"> 
-	      <div class="linediv-c"> 
-		<h3>$6000</h3> <p>of $10,000</p>
+	      <div class="span4"> 
+	        <div class="linediv-c"> 
+		  <h3>$3000</h3> <p>of $10,000</p>
+	        </div> 
 	      </div> 
-	    </div> 
 
-	    <div class="span4"> 
-	      <div class="linediv-r"> 
-		<h3>10</h3> <p>days left</p>
-	      </div> 
-	    </div>
+	      <div class="span4"> 
+	        <div class="linediv-r"> 
+		  <h3>10</h3> <p>days left</p>
+	        </div> 
+	      </div>
+	  
 	  </div> 
 	</div> 
 	  
 	<div class="span10 offset1">
-	<!-- thermometer is straightforward. We just use the bootstrap progress bar --> 
-	<!-- Bootstrap progress bar --> 
-	<!-- http://twitter.github.io/bootstrap/components.htmlProgress --> 
-	<div class="thermomenter progress active"> 
-	  <div class="bar bar-success" style="width: 60%;"></div>
-	  <div class="bar bar-warning" style="width: 40%"></div>
+	  <!-- thermometer is straightforward. We just use the bootstrap progress bar --> 
+	  <!-- Bootstrap progress bar --> 
+	  <!-- http://twitter.github.io/bootstrap/components.htmlProgress --> 
+	  <div class="thermomenter progress active"> 
+	    <div class="bar bar-success" style="width: 60%;"></div>
+	    <div class="bar bar-warning" style="width: 40%"></div>
+	  </div> 
 	</div> 
-      </div> 
 
-      <div classs="span6 offset3 order">
-      <!-- Standard Bootstrap button --> 
-      <!-- http://twitter.github.io/bootstrap/base-css.html#buttons --> 
-        <button class="btn btn-success btn-large">Preorder</button>
-      </div> 
+	<div class="span6 offset3 order">
+	  <!-- Standard Bootstrap button --> 
+	  <!-- http://twitter.github.io/bootstrap/base-css.html#buttons --> 
+          <button class="btn btn-success btn-large">Preorder</button>
+	</div> 
 
-      <div clas="span8 offset2 social">
-	<!-- Social buttons are not included in default Bootstrap --> 
-	<!-- See: http://noizwaves.github.io/bootstrap-social-buttons --> 
-	<button class="btn btn-twitter"><i class="icon-twitter"></i> I Twitter</button>
-	<button class="btn btn-facebook"><i class="icon-facebook"></i> I Facebook</button> 
-      </div>
+	<div class="span8 offset2 social">
+	  <!-- Social buttons are not included in default Bootstrap --> 
+	  <!-- See: http://noizwaves.github.io/bootstrap-social-buttons --> 
+	  <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
+	  <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button> 
+	</div>
+
     </div>
   </div> 
 
